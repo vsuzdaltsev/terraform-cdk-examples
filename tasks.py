@@ -17,14 +17,14 @@ def prepare(context, project=None):
 def eks_deploy(context):
     """>> Deploy EKS stack."""
     with context.cd('eks'):
-        context.run("cdktf deploy --auto-approve --disable-logging", pty=True)
+        context.run("cdktf deploy --auto-approve", pty=True)
 
 
 @task
 def eks_destroy(context):
     """>> Destroy EKS stack."""
     with context.cd('eks'):
-        context.run("cdktf destroy --auto-approve --disable-logging", pty=True)
+        context.run("cdktf destroy --auto-approve", pty=True)
 
 
 @task
