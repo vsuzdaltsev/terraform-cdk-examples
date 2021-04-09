@@ -6,7 +6,7 @@ projects = ['eks']
 
 @task
 def prepare(context, project=None):
-    """>> Prepare the repo."""
+    """>> Prepare the repo for given project."""
     with context.cd(project):
         context.run('pipenv sync')
         context.run('pipenv sync -d')
@@ -15,30 +15,28 @@ def prepare(context, project=None):
 
 @task
 def eks_deploy(context):
-    """>> Deploy stack."""
+    """>> Deploy EKS stack."""
     with context.cd('eks'):
         context.run("cdktf deploy --auto-approve --disable-logging", pty=True)
 
 
 @task
 def eks_destroy(context):
-    """>> Destroy stack."""
+    """>> Destroy EKS stack."""
     with context.cd('eks'):
         context.run("cdktf destroy --auto-approve --disable-logging", pty=True)
 
 
 @task
 def eks_diff(context):
-    """>> Destroy stack."""
+    """>> Show terrafrom diff for the EKS stack."""
     with context.cd('eks'):
         context.run("cdktf diff", pty=True)
 
 
 @task
 def autopep8(context):
-    """
-    >> Run autocorrection on python files
-    """
+    """>> Run autocorrection on python files."""
     print(">> Autocorrect python files according to styleguide")
     context.run("autopep8 --in-place --max-line-length 200 --aggressive *.py --verbose")
     for directory in projects:
