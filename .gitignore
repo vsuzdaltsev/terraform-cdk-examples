@@ -4,3 +4,4 @@ terraform.tfstate*
 cdktf.out
 venv
 .idea
+.DS_Store
