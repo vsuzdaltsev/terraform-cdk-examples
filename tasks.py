@@ -31,10 +31,13 @@ def autopep8(context):
 
 ns = Collection()
 local = Collection('local')
+cdk = Collection('cdk')
 
 local.add_task(prepare, 'prepare_repo')
 local.add_task(autopep8, 'autopep8')
-local.add_task(deploy, 'deploy')
-local.add_task(destroy, 'destroy')
 
+cdk.add_task(deploy, 'deploy')
+cdk.add_task(destroy, 'destroy')
+
+ns.add_collection(cdk)
 ns.add_collection(local)

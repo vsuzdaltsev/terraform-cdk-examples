@@ -39,26 +39,27 @@ Install Dependency Library
 
 Export AWS credentials.
 
-Generate CDK for Terraform constructs for Terraform provides and modules used in the project.
+Available tasks:
 
 ```
-~$ cdktf get
+$ inv -l
+>>
+cdk.deploy           >> Deploy stack.
+cdk.destroy          >> Deploy stack.
+local.autopep8       >> Run autocorrection on python files
+local.prepare-repo   >> Prepare the repo.
 ```
 
-Compile and generate Terraform configuration
+Prepare dependencies and deploy stack:
 
 ```
-~$ cdktf synth
+$ inv local.prepare-repo
+$ inv cdk.deploy
 ```
 
-The above command will create a folder called `cdktf.out` that contains all Terraform JSON configuration that was
-generated.
+Remove stack:
 
-Run Terraform commands
+```
+$ inv cdktf.destroy
 
-```bash
-cd cdktf.out
-terraform init
-terraform plan
-terraform apply
 ```
