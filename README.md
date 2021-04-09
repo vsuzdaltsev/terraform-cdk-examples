@@ -44,12 +44,11 @@ Available tasks:
 ```
 ~$ inv -l
 >>
-  cdk.eks.deploy       >> Deploy stack.
-  cdk.eks.destroy      >> Destroy stack.
-  cdk.eks.diff         >> Destroy stack.
-  local.autopep8       >> Run autocorrection on python files
-  local.prepare-repo   >> Prepare the repo.
-
+  cdk.eks.deploy       >> Deploy EKS stack.
+  cdk.eks.destroy      >> Destroy EKS stack.
+  cdk.eks.diff         >> Show terrafrom diff for the EKS stack.
+  local.autopep8       >> Run autocorrection on python files.
+  local.prepare-repo   >> Prepare the repo for given project.
 ```
 
 Prepare dependencies and deploy stack:
@@ -63,5 +62,4 @@ Remove stack:
 
 ```
 ~$ inv cdktf.destroy
-
 ```
