@@ -42,7 +42,7 @@ Export AWS credentials.
 Available tasks:
 
 ```
-$ inv -l
+~$ inv -l
 >>
 cdk.deploy           >> Deploy stack.
 cdk.destroy          >> Deploy stack.
@@ -53,13 +53,13 @@ local.prepare-repo   >> Prepare the repo.
 Prepare dependencies and deploy stack:
 
 ```
-$ inv local.prepare-repo
-$ inv cdk.deploy
+~$ inv local.prepare-repo
+~$ inv cdk.deploy
 ```
 
 Remove stack:
 
 ```
-$ inv cdktf.destroy
+~$ inv cdktf.destroy
 
 ```
