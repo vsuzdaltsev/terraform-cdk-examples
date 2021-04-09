@@ -37,6 +37,8 @@ Install Dependency Library
 
 ## Get Started
 
+Export AWS credentials.
+
 Generate CDK for Terraform constructs for Terraform provides and modules used in the project.
 
 ```
@@ -49,7 +51,8 @@ Compile and generate Terraform configuration
 ~$ cdktf synth
 ```
 
-The above command will create a folder called `cdktf.out` that contains all Terraform JSON configuration that was generated.
+The above command will create a folder called `cdktf.out` that contains all Terraform JSON configuration that was
+generated.
 
 Run Terraform commands
 
