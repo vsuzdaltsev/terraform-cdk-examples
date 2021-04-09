@@ -1,4 +1,4 @@
-# terraform-cdk-example
+# terraform-cdk-examples
 
 ## Prerequisite
 
