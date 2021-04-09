@@ -16,7 +16,7 @@ def deploy(context):
 
 @task
 def destroy(context):
-    """>> Deploy stack."""
+    """>> Destroy stack."""
     context.run("cdktf destroy --auto-approve --disable-logging")
 
 
