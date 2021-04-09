@@ -2,13 +2,13 @@
 
 ## Prerequisite
 
-Install cdktf
+Install cdktf:
 
 ```
 ~$ npm install --global cdktf-cli
 ```
 
-Verify the installation
+Verify the installation:
 
 ```
 ~$ cdktf
