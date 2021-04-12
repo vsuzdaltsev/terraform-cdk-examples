@@ -76,5 +76,8 @@ class BasicStack(TerraformStack):
 
 
 app = App()
-BasicStack(scope=app, ns="test-eks-stack")
-app.synth()
+try:
+    BasicStack(scope=app, ns="test-eks-stack")
+    app.synth()
+except BaseException as err:
+    print(f">> Error occured: {err}")
