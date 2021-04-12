@@ -29,7 +29,7 @@ def eks_destroy(context):
 
 @task
 def eks_diff(context):
-    """>> Show terrafrom diff for the EKS stack."""
+    """>> Show terraform diff for the EKS stack."""
     with context.cd('eks'):
         context.run("cdktf diff", pty=True)
 
