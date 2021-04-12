@@ -38,10 +38,11 @@ def eks_diff(context):
 def autopep8(context):
     """>> Run autocorrection on python files."""
     print(">> Autocorrect python files according to styleguide")
-    context.run("autopep8 --in-place --max-line-length 200 --aggressive *.py --verbose")
+    linter = "autopep8 --in-place --max-line-length 200 --aggressive *.py --verbose"
+    context.run(linter)
     for directory in projects:
         with context.cd(directory):
-            context.run("autopep8 --in-place --max-line-length 200 --aggressive *.py --verbose")
+            context.run(linter)
 
 
 ns = Collection()
